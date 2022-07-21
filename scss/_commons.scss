@@ -1,88 +1,86 @@
+
 html{
-	width: 100%;
+	@extend %ancho;
 }
 
 
 nav{
-	display: flex;
-	flex-direction: column-reverse;
+	@include flex (flex,column-reverse);
 	background: $keyColorBar;
 }
 
 nav div{
-	display: flex;
+	@include flex (flex,row);
 	width: 50%;
-	flex-direction: row;
 	justify-items: flex-start;
 }
 
 nav ul{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-}
-
-nav ul li{
-	list-style-type: none;
-	width: 100%;
-	font-weight: bold;
-}
-
-nav ul li a{
-	text-decoration: none;
-	color: $grey;
-	font-family: cursive;
+	@include flex (flex, column, space-between);
+	@extend %ancho;
+	li{
+		list-style-type: none;
+		font-weight: bold;
+	}
+	a{
+		text-decoration: none;
+		color: $grey;
+		font-family: cursive;
+	}
 }
 
 
 video{
-	width: 100%;
+	@extend %ancho;
 }
 
+
+
 header div img{
-	width: 100%;
+	@extend %ancho;
 }
 
 main section img{
-	width: 100%;
+	@extend %ancho;
 }
 
 section{
 	text-align: center;
-	width: 100%;
+	@extend %ancho;
 }
 
 div img{
-	width: 100%;
+	@extend %ancho;
 }
 
 footer{
 	background: $keyColorBar;
-	width: 100%;
+	div{
+		@include flex (flex, row, space-around);
+		width: 100%;
+	}
+	
 }
 
 
-footer div{
-	display: flex;
-	width: 100%;
-	justify-content: space-around;
 
-}
 
 footer section{
-	width: 100%;
+	@extend %ancho;
 }
 
-header{
-	grid-area: img;
+
+h5{
+	color: $carusellColor;
+	font-size: $fontWidhtxl;
+	font-weight: bold;
 }
+
 
 /* Camelcase  */
 
 .boxBorder{
-	display: flex;
-	flex-direction: column;
+	@include flex (flex, column);
 	border: double 2px $boxColor;
 	box-sizing: border-box;
 	text-align: center;
@@ -92,7 +90,7 @@ header{
 .bodyImg{
 	background-image: url(../img/mapa.jpg);
 	background-size:cover;
-	width: 100%;
+	@extend %ancho;
 }
 
 
@@ -102,30 +100,26 @@ header{
 	font-style: italic;
 	font-weight: bold;
 	text-align: center;
-	width: 100%;
+	@extend %ancho;
 }
 
 .ImgSize{
-	display: flex;
+	@include flex (flex, row, center);
 	font-size: 1.4rem;
-	justify-content: center;
 	width: 100%;
 }
 
 .navbar2{
+	@include flex (flex, column, space-between);
 	position: relative;
-    display: flex;
-	flex-direction: column;
-    justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
 
 .HSize{
-	display: flex;
+	@include flex (flex, row, center);
 	font-size: 1.4rem;
-	justify-content: center;
 	padding-right: 3.5rem;
 	width: 100%;
 }
@@ -133,21 +127,21 @@ header{
 .pSize{
 	text-align: center;
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: $fontWidhts;
 	width: 100%;
 }
 
 .pieInde{
-	width: 3rem;
+	width: $maxWidht;
 	align-content: center;
 }
 
 .pieIndex{
+	@include flex (flex, column,);
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	font-size: 1rem;
-	color: blackL
 }
 
 .imagineSize{
@@ -159,8 +153,7 @@ header{
 
 
 .formSize{
-	display: flex;
-	flex-direction: column;
+	@include flex (flex, column);
 	width: 100%;
 	border: double 2px $boxColor;
 	box-sizing: border-box;
@@ -171,7 +164,8 @@ header{
 .sectionSize{
 	display: flex;
 	align-items: center;
-	width: 100%;
+	@extend %ancho;
+	height: 50%;
 }
 
 .textColor{
@@ -179,6 +173,16 @@ header{
 	color: $fontColor;
 	font-style: italic;
 	font-weight: bolder;
+}
+
+.boxColor{
+	background-color: $colorCarr;
+}
+
+.pColor{
+	color:$carusellColor;
+	font-size:$fontWidhts;
+	font-weight: bold;
 }
 
 /* Medias y Grid */
@@ -200,6 +204,11 @@ header{
 		margin: 1rem;
 	}
 
+	.Box2{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
 
 	footer{
 		display: flex;
@@ -216,13 +225,17 @@ header{
 		width: 100%;
 	}
 
+	.mainGrid{
+		display:flex;
+		flex-direction: column;
+	}
+
 	.imagineSize{
 		width: 70%;
 	}
 
 	.footer Img{
-		display: flex;
-		flex-direction: column;
+		@include flex (flex,color);
 		align-items: center;
 	}
 

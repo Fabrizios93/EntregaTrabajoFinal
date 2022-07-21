@@ -1,0 +1,11 @@
+@mixin flex ($display, $direction, $content){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $content;
+}
+    
+
+%ancho{
+    width: 100%;
+}
+

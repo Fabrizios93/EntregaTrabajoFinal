@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
-html {
+html, nav ul, video, header div img, main section img, section, div img, footer section, .bodyImg, .bgDarkSize, .sectionSize {
   width: 100%; }
 
 nav {
   display: flex;
   flex-direction: column-reverse;
-  background: linear-gradient(90deg, rgba(238, 238, 238, 0.986899) 2%, rgba(150, 80, 80, 0.986899) 37%, rgba(231, 191, 11, 0.986899) 100%, #9f89ee 1000%); }
+  background: linear-gradient(0deg, #aac1c2 0%, #accbcb 20%, #aad1d0 38%, #b7e8e3 53%, #cffcf9 71%, #d4f2f1 84%, #dafcff 100%); }
 
 nav div {
   display: flex;
@@ -17,49 +17,29 @@ nav div {
 nav ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%; }
-
-nav ul li {
-  list-style-type: none;
-  width: 100%;
-  font-weight: bold; }
-
-nav ul li a {
-  text-decoration: none;
-  color: #454242dc;
-  font-family: cursive; }
-
-video {
-  width: 100%; }
-
-header div img {
-  width: 100%; }
-
-main section img {
-  width: 100%; }
+  justify-content: space-between; }
+  nav ul li {
+    list-style-type: none;
+    font-weight: bold; }
+  nav ul a {
+    text-decoration: none;
+    color: #454242dc;
+    font-family: cursive; }
 
 section {
-  text-align: center;
-  width: 100%; }
-
-div img {
-  width: 100%; }
+  text-align: center; }
 
 footer {
-  background: linear-gradient(90deg, rgba(238, 238, 238, 0.986899) 2%, rgba(150, 80, 80, 0.986899) 37%, rgba(231, 191, 11, 0.986899) 100%, #9f89ee 1000%);
-  width: 100%; }
+  background: linear-gradient(0deg, #aac1c2 0%, #accbcb 20%, #aad1d0 38%, #b7e8e3 53%, #cffcf9 71%, #d4f2f1 84%, #dafcff 100%); }
+  footer div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
 
-footer div {
-  display: flex;
-  width: 100%;
-  justify-content: space-around; }
-
-footer section {
-  width: 100%; }
-
-header {
-  grid-area: img; }
+h5 {
+  color: rgba(61, 2, 41, 0.877);
+  font-size: 5rem;
+  font-weight: bold; }
 
 /* Camelcase  */
 .boxBorder {
@@ -72,16 +52,14 @@ header {
 
 .bodyImg {
   background-image: url(../img/mapa.jpg);
-  background-size: cover;
-  width: 100%; }
+  background-size: cover; }
 
 .bgDarkSize {
   background-color: #380303;
   color: #BD2E2E;
   font-style: italic;
   font-weight: bold;
-  text-align: center;
-  width: 100%; }
+  text-align: center; }
 
 .ImgSize {
   display: flex;
@@ -118,8 +96,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 1rem;
-  color: blackL; }
+  font-size: 1rem; }
 
 .imagineSize {
   filter: brightness(1.1);
@@ -139,13 +116,21 @@ header {
 .sectionSize {
   display: flex;
   align-items: center;
-  width: 100%; }
+  height: 50%; }
 
 .textColor {
   background-color: #380303;
   color: #1380e6;
   font-style: italic;
   font-weight: bolder; }
+
+.boxColor {
+  background-color: rgba(48, 220, 250, 0.5); }
+
+.pColor {
+  color: rgba(61, 2, 41, 0.877);
+  font-size: 1rem;
+  font-weight: bold; }
 
 /* Medias y Grid */
 @media only screen and (min-width: 800px) {
@@ -158,6 +143,10 @@ header {
     padding-left: 1rem; }
   nav ul li {
     margin: 1rem; }
+  .Box2 {
+    display: flex;
+    width: 100%;
+    flex-direction: column; }
   footer {
     display: flex;
     width: 100%; }
@@ -167,6 +156,9 @@ header {
     margin-left: 1.5rem; }
   footer section iframe {
     width: 100%; }
+  .mainGrid {
+    display: flex;
+    flex-direction: column; }
   .imagineSize {
     width: 70%; }
   .footer Img {
